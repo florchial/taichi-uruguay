@@ -12,19 +12,19 @@ export interface Props {
 }
 
 const {
-  title = "Welcome to Our Church",
-  subtitle = "A place of worship, community, and spiritual growth",
-  backgroundImage = "/uploads/hero-bg.jpg",
-  ctaText = "Plan Your Visit",
-  ctaLink = "/im-new",
-  secondaryCtaText = "Watch Sermons",
-  secondaryCtaLink = "/sermons",
+  title = "Huǒ Lóng Yang Tai Chi Chuan Uruguay",
+  subtitle = "Movimiento suave, respiración consciente, mente en calma.",
+  backgroundImage = "/uploads/nuevapalmira1.webp",
+  ctaText="Nuestras clases",
+  ctaLink="#clases",
+  secondaryCtaText="Quiero más información",
+  secondaryCtaLink="https://wa.me/59899881278?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20las%20clases%20de%20Tai%20Chi.%20Gracias"
 } = Astro.props;
 ---
 
 <section
   class="relative min-h-[70vh] flex items-center bg-cover pt-30"
-  style={`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${backgroundImage}); background-position: center 20%;`}
+  style={`background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${backgroundImage}); background-position: center 30%;`}
 >
 
   <div class="container">
@@ -37,7 +37,7 @@ const {
           {ctaText}
         </Button>
         
-        <Button href={secondaryCtaLink} variant="outline" size="lg" class="bg-white/10 text-white border-white hover:bg-white hover:text-gray-900 backdrop-blur-sm">
+        <Button href={secondaryCtaLink} target="_blank" variant="outline" size="lg" class="bg-white/10 text-white border-white hover:bg-white hover:text-gray-900 backdrop-blur-sm">
           {secondaryCtaText}
         </Button>
       </div>
