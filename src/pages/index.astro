@@ -1,8 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroSection from "../components/Sections/HeroSection.astro";
-import EventList from "../components/Sections/EventList.astro";
-import SermonList from "../components/Sections/SermonList.astro";
+import Card from "../components/UI/Card.astro";
 import Button from "../components/UI/Button.astro";
 ---
 
@@ -41,7 +40,7 @@ import Button from "../components/UI/Button.astro";
     <div class="container">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          ¿Cómo puede ayudarme?
+          ¿Cómo puede ayudarte?
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
           Descubre algunos de sus beneficios
@@ -162,15 +161,70 @@ import Button from "../components/UI/Button.astro";
     </div>
   </section>
 
-  <SermonList />
+
+
+<section class="py-16 bg-white" id="clases">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestras clases</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Personales y grupales para todos los niveles
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card
+          className="text-center"
+          title="Nueva Palmira"
+          image={{
+            src: "/uploads/np.jpg",
+            alt: ""
+          }}
+        >
+          <div class="mb-3 flex items-center text-gray-600">
+            
+          </div> 
+        </Card>
+        <Card
+          className="text-center"
+          title="Carmelo"
+          image={{
+            src: "/uploads/carmelo.png",
+            alt: ""
+          }}
+        >
+          <div class="mb-3 flex items-center text-gray-600">
+            
+          </div> 
+        </Card>
+        <Card
+          className="text-center"
+          title="Ombúes de Lavalle"
+          image={{
+            src: "/uploads/ombues.jpg",
+            alt: ""
+          }}
+        >
+          <div class="mb-3 flex items-center text-gray-600">
+            
+          </div> 
+        </Card>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
 
   <section class="py-16 bg-gray-50" id="instructor">
     <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
         <div>
           <img
-            src="/uploads/church-default.webp"
-            alt="Our Church"
+            src="/uploads/taichiprofile.jpg"
+            alt="Instructor de taichi practicando"
             class="rounded-lg shadow-lg object-cover w-full h-full"
           />
         </div>
@@ -188,7 +242,11 @@ import Button from "../components/UI/Button.astro";
 
             <p class="text-gray-700 mb-8 text-lg">
               Te invito a tu primera clase gratuita, no hace falta experiencia
-              previa. ¡El momento es ahora!
+              previa. 
+            </p>
+
+            <p class="text-gray-700 mb-8 text-lg">
+              <strong>¡El momento es ahora!</strong>
             </p>
           </p>
         </div>
@@ -199,31 +257,20 @@ import Button from "../components/UI/Button.astro";
     <section
       class="py-20 bg-cover bg-center text-white"
       id="contacto"
-      style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/uploads/thank-you-bg.webp)"
+      style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/uploads/nuevapalmira2.webp)"
     >
       <div class="container">
         <div class="max-w-3xl mx-auto text-center">
           <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Ready to Join Our Community?
+            Te invito a disfutar de clases de Tai Chi
           </h2>
           <p class="text-xl mb-8">
-            We'd love to welcome you to our church family. Come visit us this
-            Sunday or reach out with any questions.
+            Animate a probar esta hermosa disciplina
           </p>
 
-          <div class="flex flex-wrap justify-center gap-4">
-            <Button href="/im-new" variant="primary" size="lg">
-              I'm New Here
-            </Button>
-
-            <Button
-              href="/contact"
-              variant="outline"
-              size="lg"
-              class="bg-white/10 text-white border-white hover:bg-white hover:text-gray-900 backdrop-blur-sm"
-            >
-              Contact Us
-            </Button>
+            <Button href="https://wa.me/59899881278?text=Hola!%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20acerca%20de%20las%20clases%20de%20Tai%20Chi.%20Gracias" target="_blank" variant="outline" size="lg" class="bg-white/10 text-white border-white hover:bg-white hover:text-gray-900 backdrop-blur-sm">
+          Escribime
+        </Button>
           </div>
         </div>
       </div>
