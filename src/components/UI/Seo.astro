@@ -1,21 +1,11 @@
 ---
-export interface Props {
-  title: string;
-  description: string;
-  image?: {
-    url: string;
-    alt: string;
-  };
-  type?: "website" | "article";
-  canonicalUrl?: string;
-}
 
 const {
-  title,
-  description,
+  title = "Huǒ Lóng Yang Tai Chi Chuan Uruguay",
+  description = "Si estás buscando un cambio en lo físico y en lo emocional, puedo ayudarte. Animate a probar esta hermosa disciplina.",
   image = {
-    url: "/uploads/church-default.webp",
-    alt: "Church Name",
+    url: "/uploads/taichiprofile.webp",
+    alt: "Huǒ Lóng Yang Tai Chi Chuan Uruguay",
   },
   type = "website",
   canonicalUrl,
@@ -25,17 +15,9 @@ const {
 const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site);
 
 // Get Church address and contact info (would come from site config in a real implementation)
-const churchInfo = {
-  name: "Church Name",
-  address: {
-    streetAddress: "123 Main Street",
-    addressLocality: "Anytown",
-    addressRegion: "ST",
-    postalCode: "12345",
-    addressCountry: "US",
-  },
-  telephone: "+1-555-123-4567",
-  email: "info@churchname.org",
+const schoolInfo = {
+  name: "Huǒ Lóng Yang Tai Chi Chuan Uruguay",
+  telephone: "+59899881278",
   url: Astro.site?.toString() || "https://example.com",
 };
 ---
@@ -65,45 +47,9 @@ const churchInfo = {
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Church",
-    "name": "${churchInfo.name}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "${churchInfo.address.streetAddress}",
-      "addressLocality": "${churchInfo.address.addressLocality}",
-      "addressRegion": "${churchInfo.address.addressRegion}",
-      "postalCode": "${churchInfo.address.postalCode}",
-      "addressCountry": "${churchInfo.address.addressCountry}"
-    },
-    "telephone": "${churchInfo.telephone}",
-    "email": "${churchInfo.email}",
-    "url": "${churchInfo.url}"
+    "@type": "Taichi School",
+    "name": "${schoolInfo.name}",
+    "telephone": "${schoolInfo.telephone}",
+    "url": "${schoolInfo.url}"
   }
 </script>
-
-{
-  type === "article" && (
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "${title}",
-        "image": "${new URL(image.url, Astro.site)}",
-        "description": "${description}",
-        "publisher": {
-          "@type": "Organization",
-          "name": "${churchInfo.name}",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "${new URL("/uploads/logo.png", Astro.site)}"
-          }
-        },
-        "url": "${canonicalURL}",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "${canonicalURL}"
-        }
-      }
-    </script>
-  )
-}
