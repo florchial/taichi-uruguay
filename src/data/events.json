@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "images": [
+            ""
+        ],
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "cover": "event-1.webp",
+        "date": "24-06-2025", 
+        "place": "Lorem ipsum dolor"
+    },
+    {
+        "id": 1,
+        "images": [
+            ""
+        ],
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "cover": "event-1.webp",
+        "date": "24-06-2025", 
+        "place": "Lorem ipsum dolor"
+    },
+    {
+        "id": 1,
+        "images": [
+            ""
+        ],
+        "title": "Lorem ipsum dolor sit amet",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+        "cover": "event-1.webp",
+        "date": "24-06-2025", 
+        "place": "Lorem ipsum dolor"
+    }
+]
