@@ -4,6 +4,17 @@
         "images": [
             ""
         ],
+        "title": "Campeonato Sudamericano",
+        "description": "Organizado por la asociación Shaolin Chuan",
+        "cover": "event-5.jpg",
+        "date": "24-06-2025", 
+        "place": "Montevideo"
+    },
+    {
+        "id": 1,
+        "images": [
+            ""
+        ],
         "title": "Lorem ipsum dolor sit amet",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
         "cover": "event-1.webp",
