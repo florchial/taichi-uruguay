@@ -4,7 +4,7 @@ const {
   title = "Huǒ Lóng Yang Tai Chi Chuan Uruguay",
   description = "Fortalece tu cuerpo, armoniza tu energía, calma tu mente. Te invito a disfutar de clases de Tai Chi. Animate a probar esta hermosa disciplina.",
   image = {
-    url: "/uploads/taichiprofile.webp",
+    url: "/uploads/taichi-social.webp",
     alt: "Huǒ Lóng Yang Tai Chi Chuan Uruguay",
   },
   type = "website",
@@ -17,7 +17,7 @@ const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site);
 const schoolInfo = {
   name: "Huǒ Lóng Yang Tai Chi Chuan Uruguay",
   telephone: "+59899881278",
-  url: Astro.site?.toString() || "https://example.com",
+  url: Astro.site?.toString() || "https://taichi-uruguay.pages.dev/",
 };
 ---
 
@@ -42,7 +42,6 @@ const schoolInfo = {
 <meta property="twitter:image" content={new URL(image.url, Astro.site)} />
 <meta property="twitter:image:alt" content={image.alt} />
 
-<!-- JSON-LD Schema for Church -->
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
